@@ -38,7 +38,7 @@ body {
   max-width: 40rem;
   width: 100%;
   margin: 0 auto;
-  padding: 15px 10px;
+  padding: 1rem 0.625rem;
   font-size: 1rem;
   background-color: beige;
 }
@@ -93,7 +93,7 @@ input:checked + .item__title-box > .icon {
   display: block;
   max-width: 100%;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 input:checked ~ .item__img {
