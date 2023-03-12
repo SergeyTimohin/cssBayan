@@ -1,0 +1,169 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+}
+
+.bayan__container {
+  min-width: 20rem;
+  max-width: 40rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem 0.625rem;
+  font-size: 1rem;
+  background-color: beige;
+}
+
+.bayan__wrapper {
+  color:rgb(78, 78, 255);
+}
+
+.bayan__title {
+  padding-bottom: 1rem;
+}
+
+.bayan__item {
+  border-top: 0.08rem solid #000;
+}
+
+.input {
+  display: none;
+}
+
+.label:focus {
+  color: green;
+}
+
+.item__title-box {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+
+input:checked + .item__title-box{
+  color:#000;
+}
+
+input + .item__title-box > .icon {
+  transition: all 0.4s ;
+}
+
+input:checked + .item__title-box > .icon {
+  transform: rotate(45deg);
+  transition: all 0.4s;
+}
+
+.item__img {
+  max-height: 0rem;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-bottom: 1.25rem;
+}
+
+input:checked ~ .item__img {
+  max-height: 60rem;
+  opacity: 1;
+  transition: all 0.4s;
+}
+
+@media (min-width: 768px){
+  .bayan__container {
+     max-width: 60rem;
+     font-size: 1.2rem;
+  }
+
+}
+
+@media (min-width: 1181px){
+  .bayan__container {
+     font-size: 1.4rem;
+     cursor: pointer;
+  }
+
+  .icon {
+     display: none;
+  }
+
+  .label {
+     cursor: pointer;
+  }
+
+  .label:hover > .item__img {
+     max-height: 60rem;
+     opacity: 1;
+     transition: all 0.4s;
+  }
+
+  .label:hover > .item__title-box > .icon {
+     transform: rotate(45deg);
+     transition: all 0.4s;
+  }
+
+  .label:active {
+     opacity: 0.7;
+     cursor:grab;
+     transition: all 0.4s;
+  }
+
+  .label:active > .item__title-box {
+     color:rgb(78, 78, 255);
+  }
+}
+
+@media (hover: hover) {
+
+  .bayan__wrapper:hover {
+     color:#000;
+  }
+
+  .bayan__wrapper:hover .icon{
+     display: block;
+  }
+
+  .label:hover > .item__img {
+     max-height: 60rem;
+     opacity: 1;
+     transition: all 0.4s;
+  }
+
+  .label:hover > .item__title-box > .icon {
+     transform: rotate(45deg);
+     transition: all 0.4s;
+  }
+}
